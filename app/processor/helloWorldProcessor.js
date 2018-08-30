@@ -12,7 +12,7 @@ function HelloWorldProcessor(params, callback){
 function Formatter(data) {
     data = JSON.parse(data);
     let format = {
-        message: "Helllo, " + data.hello
+        message: "Hello, " + data.hello
     }
     return format;
 }

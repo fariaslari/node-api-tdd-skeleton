@@ -1,0 +1,59 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Node RESTful API TDD Skeleton Documentation",
+    "description": "Node RESTful API TDD Skeleton Documentation",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "tags": [
+    {
+      "name": "NodeJS API Skeleton",
+      "description": "NodeJS API Skeleton"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/hello_world": {
+      "get": {
+        "tags": [
+          "Hello_World"
+        ],
+        "description": "Create new user in system",
+        "parameters": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns Hello, World",
+            "schema": {
+              "$ref": "#/definitions/HelloWorld"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "HelloWorld": {
+      "required": [],
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

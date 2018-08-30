@@ -1,11 +1,10 @@
-module.exports.router = (app) =>{
-    app.route('/hello_world').get((req, res)=>{
-        let helloWorld = require('../controller/helloWorldController');
+var express = require('express'),
+    router = express.Router();
 
-        if(helloWorld.validation(req))
-            helloWorld.invoke(req, res);
-        else{
-            res.status(400).send();
-        }
-    });
-}
+router.use('/hello_world', require('./helloWorldRoutes'));
+
+router.use('/', (req, res)=>{
+    res.status(200).send();
+});
+
+module.exports = router;
